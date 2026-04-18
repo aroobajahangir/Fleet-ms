@@ -7,21 +7,21 @@ namespace Mid_project.Services
     public class DriverService
     {
         private List<Driver> drivers = new List<Driver>();
+        private Driver del;
 
         public void AddDriver()
         {
             var d = new Driver();
 
             Console.Write("Name: ");
-            d.Name = Console.ReadLine();
+            d.Name = Console.ReadLine() ?? "";
 
             Console.Write("License: ");
-            d.LicenseNumber = Console.ReadLine();
-
+            d.LicenseNumber = Console.ReadLine() ?? "";
             Console.Write("Contact: ");
-            d.Contact = Console.ReadLine();
+            d.Contact = Console.ReadLine() ?? "";
 
-            drivers.Add(d);
+            drivers.Add(del);
             Console.WriteLine("Driver Added!");
         }
 
